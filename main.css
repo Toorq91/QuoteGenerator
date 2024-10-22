@@ -43,7 +43,7 @@ hr {
 }
 
 .quote-box {
-    border: 3px dashed black;
+    border: 3px dashed rgb(0, 255, 0);
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 15px;

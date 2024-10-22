@@ -28,7 +28,16 @@ $(document).ready(function() {
     }
     getNewQuote();
 
-    $('.get-quote').on('click', function() {
+    $('.get-quote').on('click', function(event) {
+        event.preventDefault();
         getNewQuote();
+    });
+
+    $('.share-quote').on('click', function(event) {
+        event.preventDefault();
+        const quoteText = quote + ' -- ' + (author || 'unknown');
+        window.open('https://google.com/search?q=' + encodeURIComponent(quoteText));
+        // Hvis man vil Share quote til twitter
+        // window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quoteText));
     });
 });
